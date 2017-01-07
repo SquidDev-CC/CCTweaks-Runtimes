@@ -1,0 +1,17 @@
+language: java
+notifications:
+  email: false
+sudo: required
+dist: trusty
+script:
+ - ./gradlew check --info --stacktrace
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+    - lib/
+jdk:
+  - oraclejdk8

@@ -1,8 +1,7 @@
 language: java
 notifications:
   email: false
-sudo: required
-dist: trusty
+sudo: false
 script:
  - ./gradlew check --info --stacktrace
 before_cache:

@@ -7,6 +7,8 @@ import dan200.computercraft.api.lua.LuaException;
 import dan200.computercraft.core.apis.ILuaAPI;
 import dan200.computercraft.core.computer.Computer;
 import dan200.computercraft.core.lua.ILuaMachine;
+import net.minecraft.client.Minecraft;
+import net.minecraftforge.common.MinecraftForge;
 import net.sandius.rembulan.*;
 import net.sandius.rembulan.compiler.CompilerChunkLoader;
 import net.sandius.rembulan.exec.CallException;
@@ -78,7 +80,7 @@ public class RembulanMachine implements ILuaMachine {
 		if (host != null) globals.rawset("_HOST", host);
 
 		globals.rawset("_CC_VERSION", ComputerCraft.getVersion());
-		globals.rawset("_MC_VERSION", Config.mcVersion);
+		globals.rawset("_MC_VERSION", MinecraftForge.MC_VERSION);
 		globals.rawset("_LUAJ_VERSION", "Rembulan 0.1");
 		if (ComputerCraft.disable_lua51_features) {
 			globals.rawset("_CC_DISABLE_LUA51_FEATURES", true);

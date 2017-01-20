@@ -1,0 +1,3 @@
+gui.config.cctweaks-runtimes.luajc=LuaJC
+gui.config.cctweaks-runtimes.luajc.verify=Verify LuaJC
+gui.config.cctweaks-runtimes.luajc.threshold=Compile threshold

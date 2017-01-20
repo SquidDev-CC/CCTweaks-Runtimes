@@ -1,0 +1,12 @@
+[
+	{
+		"modid": "cctweaks-runtimes",
+		"name": "CCTweaks Runtimes",
+		"description": "Additional runtimes for CCTweaks-Lua",
+		"version": "${mod_version}",
+		"url": "https://github.com/SquidDev-CC/CCTweaks-Runtimes",
+		"credits": "Dan200, Forge team, Luaj.org",
+		"authorList": [ "SquidDev" ],
+		"dependencies": [ "ComputerCraft", "CCTweaks" ]
+	}
+]

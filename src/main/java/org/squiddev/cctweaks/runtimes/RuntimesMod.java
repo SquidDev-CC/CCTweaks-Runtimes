@@ -6,16 +6,19 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkCheckHandler;
+import net.minecraftforge.fml.relauncher.Side;
 import org.squiddev.cctweaks.api.CCTweaksAPI;
 
 import java.io.File;
+import java.util.Map;
 
 @Mod(
 	modid = RuntimesMod.ID,
 	name = RuntimesMod.NAME,
 	version = "${mod_version}",
-	dependencies = "required-after:ComputerCraft@[${cc_version},);",
-	acceptedMinecraftVersions = "[1.8.9,1.10.2]",
+	dependencies = "required-after:ComputerCraft;",
+	acceptedMinecraftVersions = "[1.8.9,]",
 	guiFactory = "org.squiddev.cctweaks.runtimes.GuiConfigFactory"
 )
 public class RuntimesMod {
@@ -33,6 +36,12 @@ public class RuntimesMod {
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		Runtimes.register(CCTweaksAPI.instance().luaEnvironment());
+	}
+
+	@NetworkCheckHandler
+	public boolean onNetworkConnect(Map<String, String> mods, Side side) {
+		// This can work on the server or on the client
+		return true;
 	}
 
 	@SubscribeEvent

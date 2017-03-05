@@ -7,6 +7,6 @@
 		"url": "https://github.com/SquidDev-CC/CCTweaks-Runtimes",
 		"credits": "Dan200, Forge team, Luaj.org",
 		"authorList": [ "SquidDev" ],
-		"dependencies": [ "ComputerCraft", "CCTweaks" ]
+		"dependencies": [ "computercraft", "cctweaks" ]
 	}
 ]

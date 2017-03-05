@@ -18,4 +18,9 @@ public class RembulanFactory implements ILuaMachineFactory<RembulanMachine> {
 	public boolean supportsMultithreading() {
 		return true;
 	}
+
+	@Override
+	public String getPreBios() {
+		return PRE_BIOS;
+	}
 }
